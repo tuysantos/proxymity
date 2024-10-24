@@ -1,0 +1,87 @@
+<div class="container">
+    <form [formGroup]="userForm">
+        <!-- row user name -->
+        <div>{{ addEdit}}</div>
+        <div class="form-row">
+            <mat-form-field class="form-field row-format">
+                <mat-label>User name</mat-label>
+                <input  id="txtusername" type="text" maxlength="100" matInput formControlName="username">
+            </mat-form-field>
+            <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.username">
+                    <div class="error-message"
+                    *ngIf="userForm.get('username')?.hasError(error.type) && (userForm.get('username')?.dirty || userForm.get('username')?.touched)">
+                    {{error.message}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- row name -->
+        <div class="form-row">
+            <mat-form-field class="form-field row-format">
+                <mat-label>Name</mat-label>
+                <input  id="txtname" type="text" maxlength="100" matInput formControlName="name">
+            </mat-form-field>
+            <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.name">
+                    <div class="error-message"
+                    *ngIf="userForm.get('name')?.hasError(error.type) && (userForm.get('name')?.dirty || userForm.get('name')?.touched)">
+                    {{error.message}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- row email -->
+        <div class="form-row">
+            <mat-form-field class="form-field row-format">
+                <mat-label>Email</mat-label>
+                <input  id="txtEmail" type="email" matInput formControlName="email">
+            </mat-form-field>
+            <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.email">
+                    <div class="error-message"
+                    *ngIf="userForm.get('email')?.hasError(error.type) && (userForm.get('email')?.dirty || userForm.get('email')?.touched)">
+                    {{error.message}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- row street -->
+        <div class="form-row">
+            <mat-form-field class="form-field row-format">
+                <mat-label>Street</mat-label>
+                <input  id="txtstreet" type="text" maxlength="100" matInput formControlName="street">
+            </mat-form-field>
+            <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.street">
+                    <div class="error-message"
+                    *ngIf="userForm.get('street')?.hasError(error.type) && (userForm.get('street')?.dirty || userForm.get('street')?.touched)">
+                    {{error.message}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- row city -->
+        <div class="form-row">
+            <mat-form-field class="form-field row-format">
+                <mat-label>City</mat-label>
+                <input  id="txtcity" type="text" maxlength="100" matInput formControlName="city">
+            </mat-form-field>
+            <div class="error-messages">
+                <ng-container *ngFor="let error of error_messages.city">
+                    <div class="error-message"
+                    *ngIf="userForm.get('city')?.hasError(error.type) && (userForm.get('city')?.dirty || userForm.get('city')?.touched)">
+                    {{error.message}}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </form>
+    <div class="action-button">
+        <button mat-raised-button color="primary" (click)="saveData()">{{ addUppDate }}</button>
+    </div>
+</div>

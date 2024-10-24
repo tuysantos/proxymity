@@ -1,0 +1,33 @@
+.container {
+    border: 1px solid #534dff;
+    display: inline-block;
+    margin: 4px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #534dff;
+}
+.userInfo {
+    border-radius: 10px;
+    border: 1px solid #534dff;
+    padding: 10px;
+    margin: 4px;
+    display: block;
+    div {
+        margin-top: 4px;
+    }
+}
+
+.name-container {
+    display: inline-block;
+    text-align: left;
+    min-width: 150px;
+}
+
+.action-container {
+    display: inline-block;
+    text-align: right;
+    span {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+}

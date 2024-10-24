@@ -1,0 +1,17 @@
+
+<ng-container *ngFor="let user of users">
+    <div class="container">
+        <span class="userInfo">
+            <div class="name-container">
+                <span>{{ user.username }}</span>
+            </div>
+            <div class="action-container">
+                <span (click)="editUser(user.id)">Edit</span>
+                <span (click)="deleteUser(user.id)">Delete</span>
+            </div>
+        </span>
+        <div>{{ user.address.street }}, {{ user.address.city }}</div>
+        <div>{{ user.email }}</div>
+    </div>
+    
+</ng-container>
